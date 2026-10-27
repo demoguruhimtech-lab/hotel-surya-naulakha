@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Where is Hotel Surya located?",
     answer:
-      "Hotel Surya is located at HW94+XG4, National Highway 154, Naulakha, Sundernagar district, Mandi district, Himachal Pradesh 175019.",
+      "Hotel Surya is located at HW94+XG4, National Highway 154, Naulakha, near Sundernagar, Mandi district, Himachal Pradesh 175019.",
   },
   {
     question: "How can I enquire about room availability?",
