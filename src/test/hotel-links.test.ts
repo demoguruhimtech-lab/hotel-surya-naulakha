@@ -31,7 +31,7 @@ describe("hotel contact links", () => {
       roomType: "Deluxe Room",
       message: "Late arrival",
     });
-    const text = decodeURIComponent(url.split("text=")[1]);
+    const text = decodeURIComponent(url.split("text=")[1] ?? "");
     expect(text).toContain("Ravi Kumar");
     expect(text).toContain("Deluxe Room");
     expect(text).toContain("2026-06-10");
@@ -40,7 +40,7 @@ describe("hotel contact links", () => {
 
   it("fills fallbacks for an empty enquiry instead of blank fields", () => {
     const url = createWhatsAppEnquiry({});
-    const text = decodeURIComponent(url.split("text=")[1]);
+    const text = decodeURIComponent(url.split("text=")[1] ?? "");
     expect(text).toContain("Please share current rates and availability.");
     expect(text).not.toContain("undefined");
     expect(text).not.toContain("null");
@@ -50,7 +50,7 @@ describe("hotel contact links", () => {
     const url = createQuickWhatsAppEnquiry(
       "I would like to enquire about the Four-Bed / Family Room.",
     );
-    const text = decodeURIComponent(url.split("text=")[1]);
+    const text = decodeURIComponent(url.split("text=")[1] ?? "");
     expect(text).toContain("Four-Bed / Family Room");
   });
 
